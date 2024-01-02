@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tolTip</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .ele{
+            width:200px;
+            font-size: 1.3rem;
+            text-align: center;
+            color: red;
+            background: rgb(8, 194, 219);
+            font-family: serif;
+            height: 40px;
+            padding: 8px 0;
+            
+            cursor: pointer;
+           
+        }
+
+        .eletext{
+            font-size: 1rem;
+           margin-top: 3%;
+        display: none;
+      
+
+        }
+
+        .ele:hover + .eletext {
+  display: block;
+  color: red;
+}
+    </style>
+</head>
+<body>
+    <div class="ele">
+        hover
+    
+    </div>
+    <div class="eletext">Top Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut accusamus voluptatibus quae temporibus amet dolorum voluptas odio reiciendis magnam error.</div>
+</body>
+
+<script>
+
+</script>
+</html>

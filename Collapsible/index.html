@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+
+        .col{
+            width: 80%;
+            height: 50px;
+            background: gray;
+            padding: 10px 8px;
+            display: flex;
+            justify-content: space-between;
+           
+        }
+        .col-text{
+            
+            font-size: 1.3rem;
+            color: white;
+        
+        
+        }
+        .col-sign{
+float: right;
+            font-size: 1.2rem;
+            color: red;
+        }
+
+        .collapse{
+            width: 80%;
+            height: 250px;
+            background: red;
+            color: white;
+            padding: 10px;
+            font-size: 1.3rem;
+            font-family: serif;
+            display: none;
+            animation: height 0.4s forwards ease-in-out;
+            position: relative;
+          
+            
+        }
+        @keyframes height {
+            0%{
+                top: -100px;
+            }
+            100%{
+                top: 0;
+            }
+        }
+
+        .add{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="col">
+        <div class="col-text">click</div>
+        <div class="col-sign">+</div>
+    </div>
+    <div class="collapse">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, ex sunt magnam animi enim corrupti vero natus, quas molestias esse culpa aperiam repudiandae expedita, ad at sapiente voluptatem fuga neque?
+    </div>
+
+
+    <script>
+        col=document.querySelector('.col')
+        colSign=document.querySelector('.col-sign')
+        collapse=document.querySelector('.collapse')
+
+        col.addEventListener('click',function(){
+            collapse.classList.toggle('add')
+            if(collapse.classList.contains('add')){
+                colSign.innerHTML='-'
+            }
+            else{
+                colSign.innerHTML='+'
+            }
+        })
+    </script>
+</body>
+</html>

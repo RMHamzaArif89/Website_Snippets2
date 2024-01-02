@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cards {
+            width: 100%;
+            height: 65%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .card {
+            width: 20%;
+            height: 100%;
+            perspective: 1000px;
+
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+
+        .card-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('/img.jpg');
+            background-size: 100% 100%;
+            background-position: center;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+
+
+        }
+
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+
+
+
+        .text {
+            font-size: 2rem;
+            color: white;
+            margin-top: 2%;
+            font-family: serif;
+        }
+
+
+
+        .text2 {
+            font-size: 1.5rem;
+            color: white;
+            margin-top: 2%;
+            font-family: serif;
+        }
+
+
+        .text {
+            font-size: 1.2rem;
+            color: gray;
+            margin-top: 2%;
+            font-family: serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cards">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-img">
+
+                    </div>
+                    <div class="card-back">
+                        <div class="text">RM Hamza</div>
+                        <div class="text2">Web Developer</div>
+                        <div class="text3">Lorem ipsum dolor sit amet...</div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-img">
+
+                    </div>
+                    <div class="card-back">
+                        <div class="text">RM Hamza</div>
+                        <div class="text2">Web Developer</div>
+                        <div class="text3">Lorem ipsum dolor sit amet...</div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-img">
+
+                    </div>
+                    <div class="card-back">
+                        <div class="text">RM Hamza</div>
+                        <div class="text2">Web Developer</div>
+                        <div class="text3">Lorem ipsum dolor sit amet...</div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

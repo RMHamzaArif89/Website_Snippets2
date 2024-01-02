@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StickyHeader</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 2000px;
+            background: skyblue;
+        }
+
+        .heading1{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: black;
+          width: 100%;
+          height: 350px;
+
+        }
+        .text{
+            color: white;
+            font-size: 3.5rem;
+            font-family: serif;
+            font-weight: bolder;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading1"><div class="text">Heading</div></div>
+      
+    </div>
+
+
+<script>
+text=document.querySelector('.text')
+window.addEventListener('scroll',function(){
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    text.style.fontSize = "30px";
+  } else {
+    text.style.fontSize = "3.5rem";
+  }
+})
+</script>
+</body>
+</html>

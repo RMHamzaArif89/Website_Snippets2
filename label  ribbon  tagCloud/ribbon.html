@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .label{
+            margin-top: 5%;
+            margin-left: 5%;
+            padding: 10px;
+            color: white;
+            font-size: 1.3rem;
+            font-family: serif;
+            display: inline-block;
+            position: relative;
+            width: 160px;
+            height: 50px;
+            text-align: center;
+
+        }
+
+        .ribbon{
+            position: absolute;
+            top: -12px;
+            right:-12px;
+            color: white;
+            background: gold;
+            font-size: 0.8rem;
+            font-family: serif;
+            padding: 6px;
+            border-radius: 8px;
+            transform: rotate(20deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="label" style="background-color: red;;">red
+    <div class="ribbon">NEW</div>
+    </div>
+
+    <div class="label" style="background-color: green;;">Green
+    <div class="ribbon" style="background: red;;">NEW</div>
+    </div>
+
+    <div class="label" style="background-color: blueviolet;">Bluviolet...
+    <div class="ribbon" style="background-color: black;">NEW</div>
+    </div>
+
+    <div class="label" style="background-color: skyblue;;">skyblue
+    <div class="ribbon">NEW</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullScreenWindow</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container video{
+            width: 280px;
+            height: 280px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video src="" controls></video>
+    </div>
+</body>
+
+<script>
+    video=document.querySelector('video')
+    video.addEventListener('click',function(){
+        video.requestFullscreen()
+    })
+
+</script>
+</html>
+<!-- 
+    function openFullscreen() {
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  }  elem.msRequestFullscreen();
+  }
+
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } 
+} -->

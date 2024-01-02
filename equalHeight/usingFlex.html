@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equal Height</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .con{
+        display: flex;
+    
+            width:50% ;
+            height: 40vh;
+            
+            
+        }
+        .col{
+    flex:1;
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="col" style="background-color: red;"></div>
+        <div class="col" style="background-color: black;"></div>
+        <div class="col" style="background-color: aqua;;" rowspan="2"></div>
+        <div class="col" style="background-color: #ccc;" ></div>
+    </div>
+</body>
+</html>

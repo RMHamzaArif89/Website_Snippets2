@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmoothScroll</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .container{
+            width: 100%;
+            height: 720px;
+            background: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .container .btn{
+            width: 120px;
+            height: 40px;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-family: serif;
+            color: red;
+            background: black;
+            border-radius: 3px;
+        }
+
+
+
+        .container2{
+            width: 100%;
+            height: 720px;
+            background:blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .container2 .btn2{
+            width: 120px;
+            height: 40px;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-family: serif;
+            color:blue;
+            background: black;
+            border-radius: 3px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="con1">
+        <div class="btn"><a href="#con2">scrollDown</a></div>
+    </div>
+
+
+
+    <div class="container2" id="con2">
+        <div class="btn2"><a href="#con1">scrollTop</a></div>
+    </div>
+   
+</body>
+</html>

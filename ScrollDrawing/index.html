@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollDrawing</title>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 1800px;
+           
+        }
+        .heading{
+            font-size: 2.5rem;
+            font-family: serif;
+            font-weight: bolder;
+            color: black;
+            margin-top: 3%;
+        }
+
+        .text{
+            font-size: 1.8rem;
+            font-family: serif;
+            color: blue;
+            margin-top: 3%;
+        }
+
+        .text2{
+            font-size: 1.2rem;
+            font-family: serif;
+            color:gray;
+            margin-top: 3%;
+        }
+
+
+        #mySVG{
+            position: fixed;
+            top: 25%;
+            width: 300px;
+            height: 210px;
+            margin-left: 35%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Scroll this window</div>
+        <div class="text">To get the triangle</div>
+        <div class="text2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium ratione reiciendis pariatur provident totam aliquam fugit, numquam labore deserunt. Dolor odio expedita rem repudiandae delectus, nemo possimus quas magnam sed.</div>
+    </div>
+
+    <svg id="mySVG">
+        <path fill="none" stroke="red" stroke-width="3" id="triangle" d="M150 0 L75 200 L225 200 Z"/>
+      </svg>
+
+
+
+
+
+
+
+      <script>
+        
+        var triangle = document.getElementById("triangle");
+        var length = triangle.getTotalLength();
+        
+        triangle.style.strokeDasharray = length;
+        
+        // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+        triangle.style.strokeDashoffset = length;
+        
+        // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+        window.addEventListener("scroll", myFunction);
+        
+        function myFunction() {
+          var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+        
+          var draw = length * scrollpercent;
+        
+          // Reverse the drawing (when scrolling upwards)
+          triangle.style.strokeDashoffset = length - draw;
+        }
+        </script>
+</body>
+</html>

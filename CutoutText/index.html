@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutout Text</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-image: url(/bg.jpg);
+            background-size: 100% 100%;
+            background-position: center;
+        }
+
+        .ctext{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: white;
+        padding: 10px;
+            font-size: 10vw;
+            font-weight: bold;
+            transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ctext">
+FOOD
+        </div>
+    </div>
+</body>
+</html>

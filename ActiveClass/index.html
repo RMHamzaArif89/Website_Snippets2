@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActiveClass</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+        .con{
+        width: 40%;
+        height: 50px;
+        display: flex;
+        
+        } 
+        li{
+            border: 1px solid gray;
+            list-style: none;
+            color: black;
+            background: #ccc;
+            width: 80px;
+            height: 100%;
+            display: inline-block;
+            font-size: 1.2rem;
+            font-family: serif;
+            cursor: pointer;
+            text-align: center;
+            padding: 10px 0;
+            margin-left: -1px;
+        }
+        .active{
+            background-color:black;
+            color: white;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="con">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </div>
+    </div>
+
+
+    <script>
+        list=document.querySelectorAll('li')
+
+
+        for (var i = 0; i < list.length; i++) {
+  list[i].addEventListener("click", function() {
+    var current = document.querySelector(".active");
+    current.classList.remove('active')
+            this.classList.add('active')
+  });
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Modal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(200deg, black, gray);
+        }
+
+        .btn {
+            width: 120px;
+            height: 35px;
+            padding: 6px 0;
+            text-align: center;
+            color: white;
+            background: red;
+            font-size: 1.2rem;
+            font-family: serif;
+            position: absolute;
+            left: 45%;
+            top: 50%;
+            cursor: pointer;
+            
+        }
+
+        .modal {
+            width: 60%;
+            height: 30%;
+            position: absolute;
+            display: none;
+            top: 10%;
+            left: 20%;
+            animation-name: top;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            display: none;
+            background: red;
+        
+        }
+        h2,h1,p{
+            color: white;
+        }
+
+        .delete{
+            width: 120px;
+            height: 35px;
+            padding: 6px 0;
+            text-align: center;
+            color: white;
+            background: #000;
+            font-size: 1.3rem;
+            font-family: serif;
+            margin: 3% 0 0 3%;
+            cursor: pointer;
+        }
+
+        @keyframes top {
+            0% {
+                top: -30%;
+
+            }
+
+            100% {
+                top: 10%;
+            }
+        }
+
+        .add{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="modal">
+            <h1>Modal</h1>
+            <h3>click to show</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, culpa dolores? Dolores exercitationem
+                soluta amet quibusdam quidem vel accusamus praesentium fuga voluptatum asperiores numquam beatae, quasi
+                assumenda minus odio odit.</p>
+                <div class="delete">Delete</div>
+        </div>
+        <div class="btn">Modal Btn</div>
+
+    </div>
+</body>
+
+<script>
+    modal=document.querySelector('.modal')
+    btn=document.querySelector('.btn')
+    btn.addEventListener('click',function(){
+        modal.classList.toggle('add')
+    })
+
+    del=document.querySelector('.delete')
+    del.addEventListener('click',function(){
+        modal.classList.remove('add')
+    })
+
+</script>
+
+</html>
